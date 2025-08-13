@@ -545,7 +545,7 @@
 
 .loginFooter {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 1.4rem;
   color: #94a3b8;
   position: relative;
@@ -564,4 +564,22 @@
   color: #a3b8ff;
   text-decoration: underline;
   filter: drop-shadow(0 0 5px rgba(141, 162, 251, 0.5));
+}
+
+.loginForgot, .loginSignup {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1em;
+  color: #a979ff; /* Or whatever color you prefer for links */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.loginForgot:hover, .loginSignup:hover {
+  color: #c7a4ff;
+  text-decoration: underline;
 }
