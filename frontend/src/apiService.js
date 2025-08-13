@@ -1,5 +1,7 @@
 // src/apiService.js
-const API_BASE_URL = 'http://localhost:8000/api/v1'; // Backend API base URL'i
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? '/api/v1' 
+  : 'http://localhost:8000/api/v1'; // Backend API base URL'i
 
 class ApiService {
   async makeRequest(endpoint, options = {}) {
@@ -46,4 +48,5 @@ class ApiService {
   }
 }
 
-export default new ApiService();
+const apiService = new ApiService();
+export default apiService;
