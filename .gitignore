@@ -1,3 +1,21 @@
+# =============== Frontend ===============
+# Bağımlılıklar
+frontend/node_modules/
+frontend/build/
+frontend/coverage/
+
+# Log Dosyaları
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Ortam Değişkenleri
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# =============== Backend ===============
 # Python Sanal Ortamları
 venv/
 .venv/
@@ -8,12 +26,19 @@ __pycache__/
 *.db
 *.sqlite3
 
+# Ortam Değişkenleri Dosyası
+.env
+
+# =============== Genel ===============
 # IDE ve Editör Ayarları
 .vscode/
 .idea/
 
-# Ortam Değişkenleri Dosyası (Eğer kullanırsanız)
-.env
+# İşletim Sistemi Dosyaları
+.DS_Store
+Thumbs.db
+
+
 # Bağımlılıklar
 /node_modules
 
