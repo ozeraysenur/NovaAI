@@ -174,7 +174,7 @@ const Login = ({ onLogin }) => {
                   />
                   <span>Beni hatırla</span>
                 </label>
-                <a href="#" className="loginForgot">Şifremi unuttum</a>
+                <button type="button" className="loginForgot">Şifremi unuttum</button>
               </div>
               
               <button 
@@ -213,7 +213,7 @@ const Login = ({ onLogin }) => {
             
             <div className="loginFooter">
               Hesabınız yok mu?
-              <a href="#" className="loginSignup">Kayıt Ol</a>
+              <button type="button" className="loginSignup">Kayıt Ol</button>
             </div>
           </div>
         </div>

@@ -156,6 +156,7 @@ function App() {
       <ReactMarkdown 
         remarkPlugins={[remarkGfm]}
         components={{
+          // eslint-disable-next-line jsx-a11y/anchor-has-content
           a: ({node, ...props}) => <a {...props} target="_blank" rel="noopener noreferrer" className="markdown-link" />
         }}
       >
@@ -176,7 +177,7 @@ function App() {
         const urlMatch = block.match(/\[Haber Linki\]\((.*?)\)/);
         const sourceMatch = block.match(/\*\*Kaynak:\*\* (.*?)(?:\n|$)/);
         const dateMatch = block.match(/\*\*Yayın Tarihi:\*\* (.*?)(?:\n|$)/);
-        const summaryMatch = block.match(/\*\*Özet:\*\* ([\s\S]*?)(?=\n   - \*\*Link:\*\*|$)/);
+        const summaryMatch = block.match(/\*\*Özet:\*\* ([\s\S]*?)(?=\n {3}- \*\*Link:\*\*|$)/);
 
         if (titleMatch && urlMatch) {
           articles.push({

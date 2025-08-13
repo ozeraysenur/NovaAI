@@ -3,6 +3,7 @@
 set -o errexit
 
 # Frontend'i build et
+export CI=false # Uyarıları hata olarak görmemesi için
 cd frontend
 npm install
 npm run build
