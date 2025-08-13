@@ -1,9 +1,9 @@
 fastapi
-uvicorn
+uvicorn==0.23.2
 sqlalchemy
 langchain
 langchain-openai
-python-dotenv
+python-dotenv==1.0.1
 requests
 beautifulsoup4
 pydantic
@@ -18,3 +18,5 @@ python-box
 numerize
 feedparser
 trafilatura
+websockets==11.0.3
+psycopg2-binary==2.9.9
