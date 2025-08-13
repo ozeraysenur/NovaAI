@@ -63,3 +63,4 @@ yarn-error.log*
 
 # Diğer
 .DS_Store
+migrate_db.py 
