@@ -1,0 +1,191 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 5, 20, 0.7); /* Temaya uygun koyu mor tonu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px) saturate(120%); /* Arka plan blur ve doygunluk */
+  animation: fadeInOverlay 0.5s ease-out;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: 
+    linear-gradient(145deg, 
+      rgba(10, 10, 10, 0.85) 0%, 
+      rgba(26, 13, 46, 0.75) 60%, 
+      rgba(0, 0, 0, 0.9) 100%);
+  color: #e2e8f0;
+  padding: 35px 45px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 850px;
+  position: relative;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(138, 43, 226, 0.2); /* Temadaki mor renk */
+  animation: slideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-button:hover {
+  color: #fff;
+  background: rgba(138, 43, 226, 0.3);
+  border-color: rgba(138, 43, 226, 0.5);
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 35px;
+  border-bottom: 1px solid rgba(138, 43, 226, 0.15);
+  padding-bottom: 25px;
+}
+
+.modal-logo {
+  width: 65px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.5));
+}
+
+.modal-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #e2e8f0, #c1b2f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(226, 201, 255, 0.2);
+}
+
+.modal-header p {
+  font-size: 17px;
+  color: #94a3b8; /* Sidebar'daki metin rengiyle uyumlu */
+  margin-top: 10px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.feature-card {
+  background: rgba(138, 43, 226, 0.05); /* Temadaki mor rengin hafif tonu */
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 40%);
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #f1f5f9;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b0c4de; /* Temaya uygun açık mavi/gri tonu */
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.modal-footer p {
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.upgrade-button-soon {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.8), rgba(72, 61, 139, 0.9));
+  color: white;
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  padding: 16px 35px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: all 0.3s;
+  opacity: 0.6;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.2);
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    padding: 30px;
+  }
+}

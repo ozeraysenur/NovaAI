@@ -1,0 +1,72 @@
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.news-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  height: 100%; /* Kartların aynı hizada kalması için */
+}
+
+.news-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.3);
+  box-shadow: 0 12px 40px rgba(138, 43, 226, 0.2);
+}
+
+.news-card-title a {
+  font-size: 1.8rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.news-card-title a:hover {
+  color: #a3b8ff;
+}
+
+.news-card-summary {
+  font-size: 1.5rem; /* Biraz büyütüldü */
+  color: #cbd5e1;
+  line-height: 1.7; /* Satır aralığı artırıldı */
+  flex-grow: 1;
+  margin-top: 1.5rem; /* Başlıkla arasına boşluk eklendi */
+  margin-bottom: 2rem;
+}
+
+.news-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.news-card-source {
+  font-weight: 500;
+}
+
