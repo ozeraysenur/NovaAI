@@ -6,9 +6,9 @@ Nova AI, yapay zeka ve teknoloji dünyasındaki baş döndürücü bilgi akış�
 
 ![Nova AI Giriş Sayfası](screenshots/login-page.jpg)
 
-![Nova AI Ana Arayüz](screenshots/main-interface.jpg)
+![Nova AI Ana Arayüz](screenshots/main-page.jpg)
 
-![Nova AI Haber Kartları](screenshots/news-cards.jpg)
+![Nova AI Haber Kartları](screenshots/news-card.jpg)
 
 ## Projenin Amacı ve Çözdüğü Sorun
 
@@ -126,6 +126,7 @@ npm start
 3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
 4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request oluşturun
+
 
 
 
