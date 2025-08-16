@@ -4,11 +4,11 @@ Nova AI, yapay zeka ve teknoloji dünyasındaki baş döndürücü bilgi akış�
 
 **Canlı Demo:** https://novaai-vwml.onrender.com
 
-![Nova AI Giriş Sayfası](screenshots/login-page.png)
+![Nova AI Giriş Sayfası](screenshots/login-page.jpg)
 
-![Nova AI Ana Arayüz](screenshots/main-interface.png)
+![Nova AI Ana Arayüz](screenshots/main-interface.jpg)
 
-![Nova AI Haber Kartları](screenshots/news-cards.png)
+![Nova AI Haber Kartları](screenshots/news-cards.jpg)
 
 ## Projenin Amacı ve Çözdüğü Sorun
 
@@ -126,5 +126,6 @@ npm start
 3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
 4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request oluşturun
+
 
 
